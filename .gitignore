@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+node_modules/
+
+# Private source material kept locally, not published with the website.
+Resume_Ruchika.md
+The ThinkSpace (Video).mp4
