@@ -2,6 +2,17 @@
 *.log
 node_modules/
 
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+
 # Private source material kept locally, not published with the website.
 Resume_Ruchika.md
+Resume_Ruchika.docx
 The ThinkSpace (Video).mp4
+index_vid.mp4
+mock-photo-options.html
+assets/mock/
+05fdc555-f5a4-462e-83c6-88d70b21e093.png
+159f41ea-1679-4bf7-9acf-a7981800368c.png
