@@ -3,6 +3,7 @@ import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import MotionInit from "@/components/MotionInit";
+import SiteBackdrop from "@/components/SiteBackdrop";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -53,7 +54,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#f1f0eb",
+  themeColor: "#0b0d12",
 };
 
 export default function RootLayout({ children }) {
@@ -63,6 +64,7 @@ export default function RootLayout({ children }) {
         <a className="skip-link" href="#main">
           Skip to content
         </a>
+        <SiteBackdrop />
         <SiteHeader />
         {children}
         <SiteFooter />

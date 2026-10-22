@@ -1,21 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function PostIndexRow({ post, headingLevel = "h3", className = "" }) {
+export default function PostIndexRow({ post, headingLevel = "h3" }) {
   const Heading = headingLevel;
   return (
-    <Link className={`index-row reveal ${className}`} href={`/blog/${post.slug}`}>
+    <Link className="note-row" href={`/blog/${post.slug}`}>
       <div>
-        <p className="index-meta">{post.label}</p>
+        <p className="note-meta">{post.label}</p>
         <Heading>{post.title}</Heading>
         <p>{post.excerpt}</p>
       </div>
       {post.thumb && (
-        <span className="index-thumb">
+        <span className="note-thumb">
           <Image src={post.thumb} alt="" width={168} height={120} />
         </span>
       )}
-      <span className="index-arrow">↗</span>
+      <span className="note-arrow">↗</span>
     </Link>
   );
 }

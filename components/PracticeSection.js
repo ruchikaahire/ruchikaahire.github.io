@@ -1,5 +1,4 @@
 import Link from "next/link";
-import VideoBackdrop from "@/components/VideoBackdrop";
 
 const timeline = [
   {
@@ -36,10 +35,9 @@ const timeline = [
 
 export default function PracticeSection() {
   return (
-    <section className="practice" id="about">
-      <VideoBackdrop opacity={0.22} />
-      <div className="shell practice-grid">
-        <div className="practice-intro reveal">
+    <section className="section shell" id="about">
+      <div className="about-inner glass reveal">
+        <div className="about-copy">
           <h2>Words, evidence and a camera, used with care.</h2>
           <p>
             My work sits where communications meets public purpose. Across three years in
@@ -47,20 +45,18 @@ export default function PracticeSection() {
             programmes and written 50+ human-interest stories grounded in SBCC and
             gender-transformative messaging.
           </p>
-          <Link className="button button-accent" href="/blog">
+          <Link className="button button-ghost" href="/blog">
             Read the notes <span>↗</span>
           </Link>
         </div>
-        <ol className="timeline reveal">
+        <ol className="timeline">
           {timeline.map((item) => (
             <li key={item.title} tabIndex={0}>
               <span className="timeline-dot" aria-hidden="true"></span>
               <time>{item.range}</time>
-              <div>
-                <h3>{item.title}</h3>
-                <span className="timeline-org">{item.org}</span>
-                <p className="timeline-detail">{item.detail}</p>
-              </div>
+              <h3>{item.title}</h3>
+              <span className="timeline-org">{item.org}</span>
+              <p className="timeline-detail">{item.detail}</p>
             </li>
           ))}
         </ol>

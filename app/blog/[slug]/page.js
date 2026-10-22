@@ -38,38 +38,40 @@ export default async function PostPage({ params }) {
 
   return (
     <main id="main">
-      <article className={`article ${!post.image ? "article-text" : ""}`}>
-        <header className="article-header reveal">
-          <p className="label">{post.label}</p>
-          <h1>{post.title}</h1>
-          <p className="dek">{post.dek}</p>
-        </header>
+      <article className="article">
+        <div className="article-shell glass reveal">
+          <header className="article-header">
+            <p className="label">{post.label}</p>
+            <h1>{post.title}</h1>
+            <p className="dek">{post.dek}</p>
+          </header>
 
-        {post.image && (
-          <figure className={`article-image reveal ${post.imageVariant === "poster" ? "article-poster" : ""}`}>
-            <Image
-              src={post.image}
-              alt={post.imageAlt || ""}
-              width={post.imageWidth || 1600}
-              height={post.imageHeight || 900}
-            />
-            {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
-          </figure>
-        )}
-
-        <div className="article-body reveal">
-          <p className="lead">{post.lead}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.bodyHtml }} />
-          {post.endNoteHtml && (
-            <p
-              className="article-end"
-              dangerouslySetInnerHTML={{ __html: post.endNoteHtml }}
-            />
+          {post.image && (
+            <figure className="article-figure">
+              <Image
+                src={post.image}
+                alt={post.imageAlt || ""}
+                width={post.imageWidth || 1600}
+                height={post.imageHeight || 900}
+              />
+              {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
+            </figure>
           )}
+
+          <div className="article-body">
+            <p className="lead">{post.lead}</p>
+            <div dangerouslySetInnerHTML={{ __html: post.bodyHtml }} />
+            {post.endNoteHtml && (
+              <p
+                className="article-end"
+                dangerouslySetInnerHTML={{ __html: post.endNoteHtml }}
+              />
+            )}
+          </div>
         </div>
       </article>
 
-      <nav className="next-note">
+      <nav className="next-note glass">
         {post.nextSlug ? (
           <>
             <span>Next note</span>

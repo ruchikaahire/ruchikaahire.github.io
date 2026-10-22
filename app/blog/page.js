@@ -17,23 +17,23 @@ export default function BlogIndexPage() {
   const posts = getAllPostsMeta();
   return (
     <main id="main">
-      <section className="blog-hero shell reveal">
+      <section className="page-head shell reveal">
         <h1>Ideas in progress. Questions worth staying with.</h1>
         <p>
           Essays and working notes on climate, development, labour, communication and the
           politics hidden inside everyday systems.
         </p>
       </section>
-      <section className="shell blog-list" aria-label="Articles">
-        <div className="index-list">
+      <section className="shell" aria-label="Articles">
+        <div className="glass reveal">
           {posts.map((post) => (
             <PostIndexRow key={post.slug} post={post} headingLevel="h2" />
           ))}
         </div>
-      </section>
-      <section className="blog-signoff shell reveal">
-        <p>More notes are taking shape.</p>
-        <a href="mailto:ruchikaahire@gmail.com">Suggest a conversation ↗</a>
+        <div className="blog-signoff glass reveal">
+          <p>More notes are taking shape.</p>
+          <a href="mailto:ruchikaahire@gmail.com">Suggest a conversation ↗</a>
+        </div>
       </section>
     </main>
   );
