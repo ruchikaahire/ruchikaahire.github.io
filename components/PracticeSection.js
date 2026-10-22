@@ -1,4 +1,5 @@
 import Link from "next/link";
+import VideoBackdrop from "@/components/VideoBackdrop";
 
 const timeline = [
   {
@@ -36,6 +37,7 @@ const timeline = [
 export default function PracticeSection() {
   return (
     <section className="practice" id="about">
+      <VideoBackdrop opacity={0.22} />
       <div className="shell practice-grid">
         <div className="practice-intro reveal">
           <h2>Words, evidence and a camera, used with care.</h2>

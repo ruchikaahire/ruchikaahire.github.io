@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PhotoFrame from "@/components/PhotoFrame";
 
 export default function Hero() {
   return (
@@ -34,16 +35,18 @@ export default function Hero() {
           </div>
         </div>
         <figure className="hero-figure reveal">
-          <div className="hero-photo hero-photo-cutout">
-            <Image
-              src="/assets/portrait-b.webp"
-              alt="Portrait of Ruchika Ahire"
-              width={900}
-              height={1490}
-              priority
-            />
-          </div>
-          <figcaption className="hero-caption">Based in London. Open to new collaborations.</figcaption>
+          <PhotoFrame>
+            <div className="hero-photo hero-photo-cutout">
+              <Image
+                src="/assets/portrait-b.webp"
+                alt="Portrait of Ruchika Ahire"
+                width={900}
+                height={1490}
+                priority
+              />
+            </div>
+            <figcaption className="frame-caption">Based in London. Open to new collaborations.</figcaption>
+          </PhotoFrame>
           <div className="hero-stamp" aria-hidden="true">
             Evidence
             <br />
